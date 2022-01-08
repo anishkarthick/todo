@@ -1,0 +1,33 @@
+.brdr{
+    border-style: solid;
+    border: none;
+    color: white;
+    background-color:#00539CFF ; 
+    border-left: 8px solid #FFD662FF ;
+    height: 50px;
+}
+
+.button{  
+    border-radius: 8px;
+    border: none;
+    color: white;
+    padding: 7px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.green{background-color: #4CAF50;}
+.red{background-color: #ee3131;}
+
+fieldset {
+    border: 2px solid grey;
+    border-radius: 3px;
+    padding: 20px;
+}
+legend {
+    width: auto !important;
+}
