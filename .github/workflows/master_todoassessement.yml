@@ -41,4 +41,4 @@ jobs:
           app-name: 'todoAssessement'
           slot-name: 'Production'
           package: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F1E9F31E6E074D7DB59EFED020401A67 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_996DB3BFEBD44A5EA5C52DAF461B4634 }}
