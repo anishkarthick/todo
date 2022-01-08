@@ -1,12 +1,7 @@
 const express = require('express')
 const Task = require('../models/Task')
 const router = new express.Router()
-const {ensureAuthenticated,forwardAuthenticated} = require('../middleware/auth');
-
-// todo Page
-router.get('/tasks', ensureAuthenticated, (req, res) => {
-    res.sendFile('/todo/public/task.html')
-});
+const {ensureAuthenticated} = require('../middleware/auth');
 
 //task routes
 router.post('/addTask', ensureAuthenticated, async (req, res) => {

@@ -4,6 +4,7 @@ const path = require('path');
 const passport = require('passport');
 const session = require('express-session');
 var $ = require('jquery');
+const { forwardAuthenticated, ensureAuthenticated } = require('./middleware/auth');
 
 const app = express();
 
@@ -42,7 +43,12 @@ app.get('/', (req, res) => {
 // Routes
 app.use(require('./routes/users'));
 app.use(require('./routes/task'));
-
+// Login Page
+app.get('/login', forwardAuthenticated, (req, res) => res.sendFile(path.join(__dirname, '../public', 'login.html')));
+// Register Page
+app.get('/register', forwardAuthenticated, (req, res) => res.sendFile(path.join(__dirname, '../public', 'register.html')));
+// todo Page
+app.get('/tasks', ensureAuthenticated, (req, res) =>res.sendFile(path.join(__dirname, '../public', 'task.html')));
 
 app.listen(port, () => {
   console.log(`server running at ${port}`);

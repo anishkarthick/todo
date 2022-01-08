@@ -6,13 +6,6 @@ const passport = require('passport');
 const User = require('../models/User');
 const { forwardAuthenticated, ensureAuthenticated } = require('../middleware/auth');
 
-// Login Page
-router.get('/login', forwardAuthenticated, (req, res) => res.sendFile('/todo/public/login.html'));
-
-// Register Page
-router.get('/register', forwardAuthenticated, (req, res) => res.sendFile('/todo/public/register.html'));
-
-
 // Register
 router.post('/register', (req, res) => {
   const { name, email, password } = req.body;
